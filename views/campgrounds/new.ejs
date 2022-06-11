@@ -1,0 +1,41 @@
+<% layout('layouts/boilerplate') %> 
+
+<div class="row">
+    <h1 class="text-center">New Campground</h1>
+    <div class="col-6 offset-3">
+        <form action="/campgrounds" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+            <section class="mb-3">
+                <label class="form-label" for="title">title</label>
+                <input class="form-control" type="text" id="title" name="campground[title]" required>
+            </section>
+            <section class="mb-3">
+                <label class="form-label" for="location">location</label>
+                <input class="form-control" type="text" id="location" name="campground[location]" required>
+            </section>
+            <!-- <section class="mb-3">
+                <label class="form-label" for="image">image url</label>
+                <input class="form-control" type="text" id="image" name="campground[image]" required>
+            </section> -->
+            <div class="mb-3">
+                <label for="formFileMultiple" class="form-label">Browser</label>
+                <input class="form-control" type="file" name="image" id="formFileMultiple" multiple>
+            </div>
+            <section class="mb-3">
+                <label class="form-label" for="price">price</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">$</span>
+                    <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price" 
+                    name="campground[price]" aria-describedby="basic-addon1" required>
+                </div>
+            </section>
+            <section class="mb-3">
+                <label class="form-label" for="description">description</label>
+                <textarea class="form-control" type="text" id="description" name="campground[description]" required></textarea>
+            </section>
+            <button class="btn btn-success">add campground</button>
+        </form>
+        <p class="mt-3">
+        <a href="/campgrounds">all campgrounds</a>
+        </p>
+    </div>
+</div>
