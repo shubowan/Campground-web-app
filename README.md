@@ -1,7 +1,7 @@
 # Campground-web-app 露营地app
 A campground app, people can post campground info and reviews.
 
-你可以发布或者评论露营。
+Functionality: register, login, logout, post info, review, rating...
 
 tech: express.js, node.js, MongoDB
 
